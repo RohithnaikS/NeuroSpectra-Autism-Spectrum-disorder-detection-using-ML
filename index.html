@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroSpectra - Revolutionizing Autism Detection through AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>NeuroSpectra</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Revolutionizing Autism Detection through AI</h1>
+            <p>Early detection leads to better outcomes. Our AI-powered platform helps identify signs of Autism Spectrum Disorder with greater accuracy and efficiency.</p>
+            <div class="hero-buttons">
+                <a href="#demo" class="btn primary">See Demo</a>
+                <a href="#about" class="btn secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Images\Autism-bg.png" alt="AI Autism Detection Visualization">
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About NeuroSpectra</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Autism Spectrum Disorder (ASD) is a neurodevelopmental condition that affects communication, social interaction, and behavior. The early detection of ASD is crucial for timely intervention, enabling individuals to receive the appropriate therapies to improve their quality of life.</p>
+                    <p>At NeuroSpectra, we're leveraging deep learning methodologies to analyze patterns in behavioral, neurological, and visual data to detect early signs of ASD. By utilizing a combination of neural networks, machine learning algorithms, and image processing techniques, we aim to create a system that can assist healthcare professionals in identifying ASD more accurately and efficiently.</p>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <h3>1 in 36</h3>
+                        <p>Children diagnosed with ASD in the US</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>4x</h3>
+                        <p>More common in boys than girls</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>2-4 years</h3>
+                        <p>Average age of diagnosis</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>85%</h3>
+                        <p>Improved outcomes with early intervention</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="technology">
+        <div class="container">
+            <h2>Our Technology</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Deep Neural Networks</h3>
+                    <p>Our system uses advanced neural networks to identify patterns in behavioral data that may indicate ASD.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Computer Vision</h3>
+                    <p>We analyze visual cues and facial expressions to detect subtle indicators that might be missed in traditional assessments.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Predictive Analytics</h3>
+                    <p>Our algorithms can predict the likelihood of ASD based on multiple data points with increasing accuracy over time.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Big Data Processing</h3>
+                    <p>We process large datasets to continuously improve our detection models and accuracy rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2>Interactive Demo</h2>
+            <p class="demo-description">Experience how our AI system analyzes behavioral patterns to detect signs of ASD. This simplified demonstration shows the process of data analysis and pattern recognition.</p>
+            
+            <div class="demo-container">
+                <div class="demo-controls">
+                    <h3>Select Data Type</h3>
+                    <div class="data-selector">
+                        <button class="data-btn active" data-type="behavioral">Behavioral</button>
+                        <button class="data-btn" data-type="visual">Visual</button>
+                        <button class="data-btn" data-type="neurological">Neurological</button>
+                    </div>
+                    <div class="demo-options">
+                        <div class="option-group">
+                            <label for="age">Age:</label>
+                            <select id="age">
+                                <option value="18-24m">18-24 months</option>
+                                <option value="2-3y">2-3 years</option>
+                                <option value="3-5y">3-5 years</option>
+                                <option value="5-8y">5-8 years</option>
+                            </select>
+                        </div>
+                        <div class="option-group">
+                            <label for="features">Features to analyze:</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" checked> Eye contact</label>
+                                <label><input type="checkbox" checked> Social interaction</label>
+                                <label><input type="checkbox" checked> Repetitive behaviors</label>
+                                <label><input type="checkbox" checked> Communication patterns</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="analyze-btn" class="btn primary">Analyze Data</button>
+                </div>
+                <div class="demo-visualization">
+                    <div class="visualization-container">
+                        <canvas id="demo-canvas"></canvas>
+                        <div id="analysis-results" class="hidden">
+                            <h4>Analysis Results</h4>
+                            <div class="result-metrics">
+                                <div class="metric">
+                                    <span class="metric-label">Pattern Recognition:</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" id="pattern-progress"></div>
+                                    </div>
+                                    <span class="metric-value" id="pattern-value">0%</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Data Correlation:</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" id="correlation-progress"></div>
+                                    </div>
+                                    <span class="metric-value" id="correlation-value">0%</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Confidence Score:</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" id="confidence-progress"></div>
+                                    </div>
+                                    <span class="metric-value" id="confidence-value">0%</span>
+                                </div>
+                            </div>
+                            <div class="result-summary">
+                                <p id="result-text">Select data type and click "Analyze Data" to see results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="research">
+        <div class="container">
+            <h2>Research & Development</h2>
+            <div class="research-content">
+                <div class="research-text">
+                    <p>Our research focuses on developing and refining AI models that can accurately detect early signs of ASD. We collaborate with leading institutions and experts in the field to ensure our technology is based on the latest scientific understanding of autism spectrum disorders.</p>
+                    <h3>Key Research Areas:</h3>
+                    <ul>
+                        <li>Pattern recognition in behavioral data</li>
+                        <li>Neural correlates of ASD</li>
+                        <li>Visual processing differences in ASD</li>
+                        <li>Machine learning applications in neurodevelopmental disorders</li>
+                    </ul>
+                </div>
+                <div class="research-image">
+                    <img src="Images\Reasearch.jpg" alt="Research visualization">
+                </div>
+            </div>
+            <div class="objectives">
+                <h3>Project Objectives</h3>
+                <ol>
+                    <li>Develop a deep learning-based model to identify key indicators of Autism Spectrum Disorder from visual and behavioral data.</li>
+                    <li>Enhance the accuracy and speed of ASD diagnosis by applying machine learning techniques, reducing delays caused by traditional behavioral assessments.</li>
+                    <li>Create an AI-based tool that assists clinicians in diagnosing ASD in its early stages, enabling timely therapeutic interventions.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Get in Touch</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="research">Research Collaboration</option>
+                                <option value="clinical">Clinical Implementation</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="general">General Information</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Innovation Drive, Research Park<br>Cambridge, MA 02142</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@neurospectra.org</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>NeuroSpectra</h3>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#technology">Technology</a></li>
+                            <li><a href="#demo">Demo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Research Papers</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Data Policy</a></li>
+                            <li><a href="#">Accessibility</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 NeuroSpectra. All rights reserved.</p>
+                <p>Revolutionizing Autism Detection through AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

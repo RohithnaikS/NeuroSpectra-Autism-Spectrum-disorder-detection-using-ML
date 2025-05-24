@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Ensures content is above the video */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    filter: blur(10px); /* Blurs the video background */
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Ensures the video covers the area, adjusting for non-landscape */
+    opacity: 0.9; /* Slightly reduces video intensity */
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight overlay to improve readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #333;
+}
+.form-group {
+    margin: 15px 0;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input, .form-group select {
+    padding: 8px;
+    width: 200px;
+    margin: 0 auto;
+}
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #45a049;
+}
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .sidebar, .analysis-area {
+        width: 100%;
+    }
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+    .video-background video {
+        min-height: 100vh; /* Ensures full height on mobile */
+    }
+}

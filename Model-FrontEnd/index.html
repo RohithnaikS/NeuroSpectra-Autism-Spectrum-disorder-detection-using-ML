@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Video as Blurred Background -->
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="8709245-uhd_1440_2560_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    
+    <div class="content-overlay">
+    <h1>Check ASD with NeuroSpectra</h1>
+    <form id="autismForm">
+        <div class="form-group">
+            <label>A1-A10 Scores (0 or 1):</label><br>
+            <input type="number" name="A1_Score" min="0" max="1" placeholder="A1" required>
+            <input type="number" name="A2_Score" min="0" max="1" placeholder="A2" required>
+            <input type="number" name="A3_Score" min="0" max="1" placeholder="A3" required>
+            <input type="number" name="A4_Score" min="0" max="1" placeholder="A4" required>
+            <input type="number" name="A5_Score" min="0" max="1" placeholder="A5" required>
+            <input type="number" name="A6_Score" min="0" max="1" placeholder="A6" required>
+            <input type="number" name="A7_Score" min="0" max="1" placeholder="A7" required>
+            <input type="number" name="A8_Score" min="0" max="1" placeholder="A8" required>
+            <input type="number" name="A9_Score" min="0" max="1" placeholder="A9" required>
+            <input type="number" name="A10_Score" min="0" max="1" placeholder="A10" required>
+        </div>
+        <div class="form-group">
+            <label>Age:</label>
+            <input type="number" name="age" min="0" placeholder="Age" required>
+        </div>
+        <div class="form-group">
+            <label>Gender:</label>
+            <select name="gender">
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Ethnicity:</label>
+            <input type="text" name="ethnicity" placeholder="e.g., White-European" required>
+        </div>
+        <div class="form-group">
+            <label>Jaundice:</label>
+            <select name="jundice">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Family Autism History:</label>
+            <select name="austim">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Country:</label>
+            <input type="text" name="contry_of_res" placeholder="e.g., United States" required>
+        </div>
+        <div class="form-group">
+            <label>Result Score:</label>
+            <input type="number" name="result" min="0" max="10" placeholder="0-10" required>
+        </div>
+        <div class="form-group">
+            <label>Relation:</label>
+            <input type="text" name="relation" placeholder="e.g., Self" required>
+        </div>
+        <button type="submit">Predict</button>
+    </form>
+    <div id="result"></div>
+
+    </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
