@@ -21,5 +21,4 @@ SVM was observed to provide the highest accuracy in our testing phase.
 - Scikit-learn
 - NumPy
 - Pandas
-- Matplotlib / Seaborn (for visualization)
-- Flask / Streamlit (for UI - optional)
+- Matplotlib / Seaborn (for visualization) 
